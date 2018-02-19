@@ -29,25 +29,42 @@ function draw() {
       if ((i<100) && (i > 1)) {
         ctx.fillStyle = '#ffffff';
         ctx.fillText(txt1=a.substr(0,6).concat(a.substr(7,3)), 20+2*i, 50);
-        ctx.fillStyle = '#ffff01'
+        ctx.fillText(b, 20, 100);
+        ctx.fillText(c, 20, 150);
+        ctx.fillStyle = '#ffff01';
+        ctx.fillText(b.substr(6,3), 20+text2.width, 100);
+        ctx.fillText(c.substr(6,3), 20+text3.width, 150);
         ctx.fillText(a.substr(6,1), 20+text.width-i, 50);
+        ctx.fillStyle = '#ed1b24';
+        ctx.fillText(b.substr(0,3), 20, 100);
+        ctx.fillText(c.substr(0,5), 20, 150);
       }
       else if ((i >= 100) && (i<150)) {
         ctx.fillText(a.substr(6,1), 20, 50);
         ctx.fillStyle = '#ffffff';
+        ctx.fillText(b.substr(0,6).concat(b.substr(9,4)), 20, 100);
+        ctx.fillText(c, 20, 150);
         ctx.fillText(txt1, 220, 50);
-        ctx.fillStyle = '#1d1463';
-        ctx.fillRect(145, 66, 61, 40);
         ctx.fillStyle = '#ffff01';
         ctx.fillText(b.substr(6,3), 20+text2.width, 200-i);
+        ctx.fillText(c.substr(6,3), 20+text3.width, 150);
+        ctx.fillStyle = '#ed1b24';
+        ctx.fillText(b.substr(0,3), 20, 100);
+        ctx.fillText(c.substr(0,5), 20, 150);
         }
           else {
             if ((i >= 150) && (i<=256)) {
               ctx.fillText(a.substr(6,1), 20, 50);
               ctx.fillStyle = '#ffffff';
               ctx.fillText(txt1, 220, 50);
+              ctx.fillText(txt2=b.substr(0,6).concat(b.substr(9,4)), 20+(i-151)*1.6, 100);
+              ctx.fillText(c, 20, 150);
               ctx.fillStyle = '#ffff01';
               ctx.fillText(b.substr(6,3), 20+text2.width-i+150, 50);
+              ctx.fillText(c.substr(6,3), 20+text3.width, 150);
+              ctx.fillStyle = '#ed1b24';
+              ctx.fillText(b.substr(0,3), 20+(i-151)*1.6, 100);
+              ctx.fillText(c.substr(0,5), 20, 150);
               }
               else if ((i >= 257) && (i<357)) {
                 ctx.fillStyle = '#ffffff';
@@ -180,36 +197,8 @@ function draw() {
           ctx.fillText(b.substr(0,3), 20, 100);
           ctx.fillText(c.substr(0,5), 20, 150);
         }
-        if ((i<=100)&& (i >1)) {
-          ctx.fillStyle = '#ffffff';
-          ctx.fillText(b, 20, 100);
-          ctx.fillText(c, 20, 150);
-          ctx.fillStyle = '#ffff01';
-          ctx.fillText(b.substr(6,3), 20+text2.width, 100);
-          ctx.fillText(c.substr(6,3), 20+text3.width, 150);
-          ctx.fillStyle = '#ed1b24';
-          ctx.fillText(b.substr(0,3), 20, 100);
-          ctx.fillText(c.substr(0,5), 20, 150);
-        }
-        if ((i<=150)&& (i >100)) {
-          ctx.fillStyle = '#ffffff';
-          ctx.fillText(b.substr(0,6).concat(b.substr(9,4)), 20, 100);
-          ctx.fillText(c, 20, 150);
-          ctx.fillStyle = '#ffff01';
-          ctx.fillText(c.substr(6,3), 20+text3.width, 150);
-          ctx.fillStyle = '#ed1b24';
-          ctx.fillText(b.substr(0,3), 20, 100);
-          ctx.fillText(c.substr(0,5), 20, 150);
-        }
+
         if ((i<=256)&& (i >150)) {
-          ctx.fillStyle = '#ffffff';
-          ctx.fillText(txt2=b.substr(0,6).concat(b.substr(9,4)), 20+(i-151)*1.6, 100);
-          ctx.fillText(c, 20, 150);
-          ctx.fillStyle = '#ffff01';
-          ctx.fillText(c.substr(6,3), 20+text3.width, 150);
-          ctx.fillStyle = '#ed1b24';
-          ctx.fillText(b.substr(0,3), 20+(i-151)*1.6, 100);
-          ctx.fillText(c.substr(0,5), 20, 150);
         }
         if ((i >= 256) && (i<385)) {
           ctx.fillStyle = '#ffffff';
